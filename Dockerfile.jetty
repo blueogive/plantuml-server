@@ -21,5 +21,6 @@ USER jetty
 
 ENV GRAPHVIZ_DOT=/usr/bin/dot
 
+EXPOSE 8080
 ARG BASE_URL=ROOT
 COPY --from=builderjetty /app/target/plantuml.war /var/lib/jetty/webapps/$BASE_URL.war
